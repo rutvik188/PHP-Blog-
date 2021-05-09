@@ -2,10 +2,10 @@
 -- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Mar 17, 2021 at 04:09 PM
+-- Host: localhost
+-- Generation Time: May 09, 2021 at 01:09 PM
 -- Server version: 10.4.18-MariaDB
--- PHP Version: 7.4.16
+-- PHP Version: 7.3.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `blog`
+-- Database: `Blog`
 --
 
 -- --------------------------------------------------------
@@ -65,7 +65,7 @@ CREATE TABLE `topics` (
 --
 
 INSERT INTO `topics` (`id`, `name`, `description`) VALUES
-(2, 'Life', '<p>test change</p>'),
+(2, 'Life', ''),
 (3, 'Quotes', ''),
 (4, 'Fiction', ''),
 (5, 'Biography', ''),
@@ -92,7 +92,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `admin`, `username`, `email`, `password`, `created_at`) VALUES
-(21, 1, 'rutvik', 'rutvik@gmail.com', '$2y$10$eK0uTxivAdek1r3xyVve2.sEvspeV33hftEuMrVKmPYaCMMQqWbsa', '2019-11-23 14:23:30');
+(21, 1, 'rutvik', 'rutvik@gmail.com', '$2y$10$eK0uTxivAdek1r3xyVve2.sEvspeV33hftEuMrVKmPYaCMMQqWbsa', '2019-11-23 14:23:30'),
+(24, 0, 'admin', 'admin@gmail.com', '$2y$10$LfpccvW.P8iE69OolgV/s./Z/DGl7Skev63Bvc1W3jngwktjX13r.', '2021-04-22 16:23:37');
 
 --
 -- Indexes for dumped tables
@@ -139,7 +140,7 @@ ALTER TABLE `topics`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- Constraints for dumped tables
